@@ -1,0 +1,427 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --body-font: "Poppins", sans-serif;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--body-font);
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-x: hidden;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.first{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    min-height: 100vh;
+    height: auto;
+    background-color: #7F4097;
+}
+#image{
+    max-width: 850px;
+    /* min-height: 920px; */
+    border-radius: 5px;
+    /* height: auto; */
+    width: 850px;
+    height: auto;
+    background-color: #fff;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+}
+.reciept{
+    width: 95%;
+    height: auto;
+    display: block;
+}
+.reciept-header{
+    width: 100%;
+    height: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.reciept-header img{
+    width: auto;
+    height: 80%;
+}
+.cus_info{
+    width: 100%;
+    height: 20rem;
+    /* background-color: aliceblue; */
+    /* border: 1px solid rgb(206, 206, 206); */
+    border-radius: 10px;
+}
+.cus_info-head{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    padding: 20px;
+    border-bottom: 1px solid rgb(206, 206, 206);
+}
+.cus_info-head h1{
+    font-size: 1.5rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: #BDC92A;
+    text-transform: uppercase;
+}
+.cus_info p{
+    font-size: 1.1rem;
+    margin: 25px 20px;
+    letter-spacing: 1px;
+}
+.product_list_head{
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    text-align: center;
+    /* border-bottom: 1px solid #7F4097; */
+    margin-top: 3rem;
+}
+.product_list_head h2{
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: 2.5px;
+    color: #BDC92A;
+    text-transform: uppercase;
+}
+.product_list{
+    width: 100%;
+    height: auto;
+}
+table, th, td{
+    border: 1.5px solid rgb(206, 206, 206);
+    font-size: 0.9rem;
+    border-collapse: collapse;
+    font-weight: 400;
+    text-align: center;
+}
+tr{
+    height: 4rem;
+    font-weight: 400;
+}
+.prod_row{
+    background-color: rgb(175, 175, 175);
+    color: #fff;
+}
+.cal-infor{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+.cal-infor-1{
+    width: 50%;
+    height: auto;
+}
+.cal-infor-1 img{
+    height: 4.5rem;
+    width: auto;
+    margin-top: 4rem;
+}
+#save-button{
+    position: fixed;
+    bottom: 0;
+    right: 15rem;
+    width: 13rem;
+    height:  3.5rem;
+    outline: none;
+    border: none;
+    background-color: #BDC92A;
+    color: #fff;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+#savepdf{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 13rem;
+    height:  3.5rem;
+    outline: none;
+    border: none;
+    background-color: #BDC92A;
+    color: #fff;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+#close_me{
+    position: fixed;
+    bottom: 4rem;
+    left: 0;
+    width: 13rem;
+    height:  3.5rem;
+    outline: none;
+    border: none;
+    background-color: red;
+    color: #fff;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+#tot{
+    background-color: red;
+    color: #fff;
+}
+#finalamount{
+    font-weight: 700;
+}
+.first-div{
+    width: 100vw;
+    height: auto;
+    min-height: 100vh;
+    display: block;
+    background-color: #7F4097;
+    
+}
+.logo-div{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #BDC92A; */
+    padding: 12px;
+}
+.logo-div img{
+    width: 14rem;
+    height: auto;
+}
+.Form-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+.Form-div-sub{
+    width: 40%;
+    height: 100%;
+}
+.Form-div-sub h2{
+    color: #fff;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 200;
+    letter-spacing: 1.5px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+form{
+    width: 100%;
+    height: auto;
+    background-color: #ffffff3d;
+    border-radius: 10px;
+    border: 1px solid #fff;
+    padding: 50px;
+}
+.cus{
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    color: #fff;
+    margin-top: 2rem;
+}
+.form-in{
+    width: 100%;
+    min-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+.form-label{
+    font-size: 0.8rem;
+    color: #fff;
+    margin-bottom: 0.4rem;
+}
+.form-control{
+    width: 100%;
+    height: 2.7rem;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 0.7rem;
+    color: rgb(61, 61, 61);
+}
+.form-control:focus{
+    border-bottom: 2px solid #b7c42c;
+}
+.push{
+    margin-top: 2.5rem;
+}
+.btn{
+    width: 8rem;
+    height: 2.5rem;
+    background-color: #BDC92A;
+    color: #fff;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.btn-div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    margin-top: 2.5rem;
+}
+.gen{
+    width: 14rem;
+    height: 3rem;
+    outline: none;
+    border: none;
+    background-color: red;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+    
+}
+.roww{
+    width: 100%;
+    height: auto;
+}
+#row2, #row3, #row4{
+    display: none;
+}
+.footer{
+    width: 100vw;
+    height: 6rem;
+    background-color: rgb(24, 24, 24);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 0.6rem;
+    margin-top: 2rem;
+}
+@media screen and (max-width: 720px){
+    #image{
+        width: 90%;
+        height: auto;
+    }
+    .reciept-header{
+        margin-top: 2rem;
+        height: 4rem;
+    }
+    .reciept-header img{
+        height: 100%;
+    }
+    .cus_info{
+        height: auto;
+        margin-top: 1rem;
+    }
+    .cus_info-head{
+        padding: 5px;
+    }
+    .cus_info-head h1{
+        font-size: 0.9rem;
+    }
+    .cus_info p{
+        font-size: 0.6rem;
+        margin: 10px 10px;
+    letter-spacing: 0px;
+
+    }
+    .product_list_head{
+        padding: 5px;
+        margin-top: 0.5rem;
+    }
+    .product_list_head h2{
+        font-size: 1.2rem;
+    }
+    table, th, td{
+        text-align: center;
+        font-size: 0.5rem;
+        border: 1px solid rgb(228, 228, 228);
+    }
+    tr{
+        height: 2rem;
+        /* min-height: 2rem; */
+    }
+    .cal-infor-1 img{
+        height: 2rem;
+        margin-top: 1rem;
+    }
+    #save-button{
+        bottom: 0;
+        left: 0;
+        position: fixed;
+        width: 8rem;
+        height: 2.5rem;
+        font-size: 0.6rem;
+    }
+    #savepdf{
+        bottom: 0;
+        right: 0;
+        position: fixed;
+        width: 8rem;
+        height: 2.5rem;
+        font-size: 0.6rem;
+    }
+    #close_me{
+        top: 0;
+        width: 8rem;
+        height: 2.5rem;
+        font-size: 0.6rem;
+    }
+    .logo-div img{
+        width: 10rem;
+    }
+    .Form-div-sub{
+        width: 90%;
+        height: 100%;
+    }
+    form{
+        padding: 10px;
+    }
+}
+
+
+
+
+
+@media print {
+    .image{
+        visibility: visible;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        overflow: hidden;
+        
+    }
+    button{
+        display: none;
+    }
+    @media print{
+        #save-button, #savepdf, #close_me{
+          visibility: hidden;
+        }
+    }
+}

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Generate Receipt</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.3/html2canvas.min.js"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io (5)/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io (5)/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io (5)/favicon-16x16.png">
+    <link rel="manifest" href="favicon_io (5)/site.webmanifest">
+</head>
+
+<body>
+    <div class="first-div">
+        <div class="logo-div">
+            <img src="img/all for love white.png">
+        </div>
+        <div class="Form-div">
+            <div class="Form-div-sub">
+                <h2>Receipt Form</h2>
+                <form id="receiptForm">
+                    <p class="cus" style="margin-top: 1rem;">Customer's Details</p>
+                    <div class="form-in">
+                        <p class="form-label">Name</p>
+                        <input type="text" class="form-control" id="name" oninput="cName()">
+
+                    </div>
+                    <div class="form-in">
+                        <p class="form-label">Address</p>
+                        <input type="text" class="form-control" id="Address" oninput="cAddress()">
+                    </div>
+                    <div class="form-in">
+                        <p class="form-label">Telephone No</p>
+                        <input type="text" class="form-control" id="Phone" oninput="cPhone()">
+                    </div>
+                    <hr>
+                    <p class="cus">Receipt's Details</p>
+                    <!-- <p class="cus">Row 1</p> -->
+                    <div class="form-in">
+                        <p class="form-label">Day</p>
+                        <select class="form-control" id="day" oninput="cDay()">
+                            <option value="">--Select Day--</option>
+                            <option value="Sunday">Sunday</option>
+                            <option value="Monday">Monday</option>
+                            <option value="Tuesday">Tuesday</option>
+                            <option value="Wednesday">Wednesday</option>
+                            <option value="Thursday">Thursday</option>
+                            <option value="Friday">Friday</option>
+                            <option value="Saturday">Saturday</option>
+                        </select>
+                    </div>
+                    <div class="form-in">
+                        <p class="form-label">Date</p>
+                        <input type="date" class="form-control" id="date" oninput="cDate()">
+                    </div>
+                    <div class="form-in">
+                        <p class="form-label">Duration (hr)</p>
+                        <input type="number" class="form-control" id="Duration" oninput="cDuration()">
+                    </div>
+                    <div class="form-in">
+                        <p class="form-label">Price/hr (£)</p>
+                        <input type="number" class="form-control" id="Price" oninput="cPrice()">
+                    </div>
+                    <hr>
+                    <div class="btn" id="Addrow2">Add row 2</div>
+
+                    <!-- start row 2 -->
+                    <div id="row2" class="roww">
+                        <div class="btn" id="delbtn2" style="background-color: red;">Delete row 2</div>
+                        <p class="cus">Row 2</p>
+                        <div class="form-in">
+                            <p class="form-label">Day</p>
+                            <select class="form-control" id="row2Day" oninput="c2Day()">
+                                <option value="">--Select Day--</option>
+                                <option value="Sunday">Sunday</option>
+                                <option value="Monday">Monday</option>
+                                <option value="Tuesday">Tuesday</option>
+                                <option value="Wednesday">Wednesday</option>
+                                <option value="Thursday">Thursday</option>
+                                <option value="Friday">Friday</option>
+                                <option value="Saturday">Saturday</option>
+                            </select>
+                        </div>
+                        <div class="form-in">
+                            <p class="form-label">Date</p>
+                            <input type="date" class="form-control" id="row2date" oninput="c2Date()">
+                        </div>
+                        <div class="form-in">
+                            <p class="form-label">Duration(hr)</p>
+                            <input type="number" class="form-control" id="row2Duration" oninput="c2Duration()">
+                        </div>
+                        <div class="form-in">
+                            <p class="form-label">Price/hr</p>
+                            <input type="number" class="form-control" id="row2Price" oninput="c2Price()">
+                        </div>
+                        <hr>
+                        <div class="btn" id="Addrow3">Add row 3</div>
+
+                        <!-- start row 3 -->
+                        <div id="row3" class="roww">
+                            <div class="btn" id="delbtn3" style="background-color: red;">Delete row 3</div>
+                            <p class="cus">Row 3</p>
+                            <div class="form-in">
+                                <p class="form-label">Day</p>
+                                <select class="form-control" id="row3Day" oninput="c3Day()">
+                                    <option value="">--Select Day--</option>
+                                    <option value="Sunday">Sunday</option>
+                                    <option value="Monday">Monday</option>
+                                    <option value="Tuesday">Tuesday</option>
+                                    <option value="Wednesday">Wednesday</option>
+                                    <option value="Thursday">Thursday</option>
+                                    <option value="Friday">Friday</option>
+                                    <option value="Saturday">Saturday</option>
+                                </select>
+                            </div>
+                            <div class="form-in">
+                                <p class="form-label">Date</p>
+                                <input type="date" class="form-control" id="row3date" oninput="c3Date()">
+                            </div>
+                            <div class="form-in">
+                                <p class="form-label">Duration(hr)</p>
+                                <input type="number" class="form-control" id="row3Duration" oninput="c3Duration()">
+                            </div>
+                            <div class="form-in">
+                                <p class="form-label">Price/hr</p>
+                                <input type="number" class="form-control" id="row3Price" oninput="c3Price()">
+                            </div>
+                            <hr>
+                            <div class="btn" id="Addrow4">Add row 4</div>
+
+                            <!-- start row 4 -->
+                            <div id="row4" class="roww">
+                                <div class="btn" id="delbtn4" style="background-color: red;">Delete row 4</div>
+                                <p class="cus">Row 4</p>
+                                <div class="form-in">
+                                    <p class="form-label">Day</p>
+                                    <select class="form-control" id="row4Day" oninput="c4Day()">
+                                        <option value="">--Select Day--</option>
+                                        <option value="Sunday">Sunday</option>
+                                        <option value="Monday">Monday</option>
+                                        <option value="Tuesday">Tuesday</option>
+                                        <option value="Wednesday">Wednesday</option>
+                                        <option value="Thursday">Thursday</option>
+                                        <option value="Friday">Friday</option>
+                                        <option value="Saturday">Saturday</option>
+                                    </select>
+                                </div>
+                                <div class="form-in">
+                                    <p class="form-label">Date</p>
+                                    <input type="date" class="form-control" id="row4date" oninput="c4Date()">
+                                </div>
+                                <div class="form-in">
+                                    <p class="form-label">Duration(hr)</p>
+                                    <input type="number" class="form-control" id="row4Duration" oninput="c4Duration()">
+                                </div>
+                                <div class="form-in">
+                                    <p class="form-label">Price/hr</p>
+                                    <input type="number" class="form-control" id="row4Price" oninput="c4Price()">
+                                </div>
+                                <hr>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="form-in push">
+                        <p class="form-label">Discount(%)</p>
+                        <input type="number" class="form-control" id="discount" oninput="cDiscount()">
+                    </div>
+                    <div class="form-in">
+                        <p class="form-label">Vat(%)</p>
+                        <input type="number" class="form-control" id="vat" oninput="cVat()">
+                    </div>
+                    <div class="btn-div">
+                        <button type="submit" class="gen">Generate Receipt <i
+                                class="bi bi-box-arrow-in-right"></i></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p class="copyy">&copy;2024 | Developed by Principal Concepts</p>
+        </div>
+
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All for love - Receipt</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.3/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"></script>
+</head>
+
+<body>
+    <div class="first">
+        <div class="image" id="image">
+            <div class="reciept">
+                <div class="reciept-header">
+                    <img src="img/all for love logoo.png">
+                </div>
+                <div class="cus_info" id="cus_info">
+                    <div class="cus_info-head">
+                        <h1>customer details</h1>
+                    </div>
+                    <p>Name: <span id="nameSpace"></span></p>
+                    <p>Address: <span id="addressSpace"></span></p>
+                    <p>Telephone No.: <span id="phoneSpace"></span></p>
+                    <p>Date - Time: <span id="dateTimeSpace"></span></p>
+                </div>
+                <div class="product_list_head">
+                    <h2>RECEIPT</h2>
+                </div>
+                <div class="product_list">
+                    <table style="width: 100%;">
+
+                        <tr class="prod_row">
+                            <th style="width: 15%;">DAY</th>
+                            <th style="width: 35%;">DATE</th>
+                            <th style="width: 15%;">DURATION(HR)</th>
+                            <th style="width: 15%;">PRICE/HR(£)</th>
+                            <th style="width: 20%;">AMOUNT(£)</th>
+                        </tr>
+                        <tr>
+                            <th id="filldayy"></th>
+                            <td id="fillDay"></td>
+                            <td id="filleduration"></td>
+                            <td id="fillprice"></td>
+                            <td id="fillAmount"></td>
+
+                        </tr>
+                        <tr>
+                            <th id="filldayy2"></th>
+                            <td id="fillDay2"></td>
+                            <td id="filleduration2"></td>
+                            <td id="fillprice2"></td>
+                            <td id="fillAmount2"></td>
+
+                        </tr>
+                        <tr>
+                            <th id="filldayy3"></th>
+                            <td id="fillDay3"></td>
+                            <td id="filleduration3"></td>
+                            <td id="fillprice3"></td>
+                            <td id="fillAmount3"></td>
+
+                        </tr>
+                        <tr>
+                            <th id="filldayy4"></th>
+                            <td id="fillDay4"></td>
+                            <td id="filleduration4"></td>
+                            <td id="fillprice4"></td>
+                            <td id="fillAmount4"></td>
+
+                        </tr>
+
+                    </table>
+                </div>
+                <div class="cal-infor">
+                    <div class="cal-infor-1">
+                        <img src="img/all for love logoooo1.png">
+                    </div>
+                    <div class="cal-infor-1">
+                        <table style="width: 100%;">
+                            <tr>
+                                <th style="width: 60%;">SUB-TOTAL(£)</th>
+                                <th style="width: 40%;" id="subtotal"></th>
+                            </tr>
+                            <tr>
+                                <th>VAT(<span id="vaat"></span>%)</th>
+                                <td id="subVatt"></td>
+
+                            </tr>
+                            <tr>
+                                <th>DISCOUNT(<span id="disc"></span>%)</th>
+                                <td id="subDiscount"></td>
+
+                            </tr>
+
+                            <tr>
+                                <th id="tot">TOTAL(£)</th>
+                                <td id="finalamount"></td>
+
+                            </tr>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <button id="save-button"><i class="bi bi-download"></i> save(PNG)</button>
+        <button id="savepdf" onclick="printt()"><i class="bi bi-download"></i> save(pdf)</button>
+        <button onclick="window.location.href='index.html'" id="close_me"><i class="bi bi-x"></i> Close</button>
+    </div>
+
+    <script>
+        function printt() {
+            window.print();
+        }
+
+        document.getElementById('save-button').addEventListener('click', function () {
+            html2canvas(document.getElementById('image')).then(function (canvas) {
+                var link = document.createElement('a');
+                link.download = 'receipt.png';
+                link.href = canvas.toDataURL();
+                link.click();
+            });
+        });
+
+
+    </script>
+    <script src="main2.js"></script>
+</body>
+
+</html>
